@@ -4,7 +4,7 @@ class Pet
   def initialize(name)
   	@name = name
   	@asleep = false
-  	@stuffInBelly = 10
+  	@stuffInBelly = 6
   	@stuffInIntestine = 0
   	@hydration = 5
   	@energy = 10
@@ -22,6 +22,7 @@ class Pet
   	else
   		puts 'Ваш питомец не голоден.'
   	end
+  	timePassed
   	needs
   end
 
@@ -33,6 +34,7 @@ class Pet
   	else
   		puts 'Ваш питомец не хочет пить.'
   	end
+  	timePassed
   	needs
   end
 
@@ -46,6 +48,7 @@ class Pet
   	else
   		puts 'Ваш питомец не хочет спать.'
   	end
+  	timePassed
   	needs
   end
 
@@ -55,6 +58,7 @@ class Pet
   	else 
   		puts 'Ваш питомец не хочет в туалет.'
   	end
+  	timePassed
   	needs
   end
 
@@ -62,6 +66,7 @@ class Pet
   	puts 'Вы играете с вашим питомцем.'
   	@mood += 2
   	@energy -= 1
+  	timePassed
   	needs
   end
 
@@ -92,13 +97,13 @@ class Pet
   		@stuffInBelly -= 1
   		@stuffInIntestine += 1
   		@hydration -= 1
+  		@energy -= 1
   		@mood -= 1
   	elsif @asleep
   		@asleep = false
   		@stuffInBelly -= 1
   		puts 'Он внезапно просыпается!'
   	end
-  	puts @name + ' проголодался! Покормите его, пока он не съел вас!'
   end
 
   def needs

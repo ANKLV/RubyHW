@@ -28,7 +28,7 @@ class Ui
 			when 'играть'
 				@pet.play
 			when 'статус'
-				puts @pet
+				p @pet
 			when 'выход'
 				break
 			else
