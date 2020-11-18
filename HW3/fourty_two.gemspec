@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'nefesh.samael@gmail.com'
   s.files       = ["lib/Fourty_two.rb"]
   s.homepage    =
-    'https://github.com/'
+    'https://github.com/ANKLV/RubyHW/tree/master/HW3'
   s.license       = 'MIT'
 end
